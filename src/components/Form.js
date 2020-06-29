@@ -7,6 +7,7 @@ class Form extends React.Component {
   }
 
   handleFirstNameChange = event => {
+     
     this.setState({
       firstName: event.target.value
     })
@@ -18,11 +19,18 @@ class Form extends React.Component {
     })
   }
 
+  handleSubmit = event => {
+    event.preventDefault()
+    console.log(this.state)
+    debugger 
+  }
+
   render() {
     return (
-      <form>
-        <input type="text" name="firstName" onChange={event => this.handleFirstNameChange(event)} value={this.state.firstName} />
+      <form onSubmit={event => this.handleSubmit(event)}>
+        <input type="text" name="firstName" onChange={this.handleFirstNameChange} value={this.state.firstName} />
         <input type="text" name="lastName" onChange={event => this.handleLastNameChange(event)} value={this.state.lastName} />
+        <input type="submit"/>
       </form>
     )
   }

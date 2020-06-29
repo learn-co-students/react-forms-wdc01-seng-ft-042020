@@ -356,10 +356,7 @@ On a larger form this can turn into some dense code.
 
 #### Controlled Component
 
-In controlled components, we explicitly set the value of a component using
-state, and update that value in response to any changes the user makes. While
-it takes a little bit of set up to implement, it makes some other parts of our
-code easier. For instance, in a basic controlled form, our `handleSubmit()`
+I r instance, in a basic controlled form, our `handleSubmit()`
 function can be relatively simple:
 
 ```js
